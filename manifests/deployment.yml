@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: harkiratvirdipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harkiratvirdipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: harkiratvirdipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: harkiratvirdipipelinesjavascriptdocker 
+          image: mycontainerunique25.azurecr.io/harkiratvirdipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
